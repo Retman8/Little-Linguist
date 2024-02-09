@@ -1,0 +1,45 @@
+<div class="container">  
+ 
+  <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()"> 
+      
+    <p>  
+      <label for="name">Category Name:</label>  
+      <input type="text" id="name" name="name" formControlName="name" class="form-control">  
+    </p>  
+    <p>  
+      <label for="name">Source Language:</label>  
+      <input type="text" id="source" name="source" formControlName="source" class="form-control">  
+    </p>
+    <p>  
+      <label for="name">Target Language:</label>  
+      <input type="text" id="target" name="target" formControlName="target" class="form-control">  
+    </p>   
+    
+    <table class="table table-bordered" formArrayName="words">  
+      <tr>  
+        <th colspan="2">words:</th>  
+        <th width="150px"><button type="button" (click)="addWord()" class="btn btn-primary">Add new Word</button></th>  
+      </tr>  
+      <tr *ngFor="let word of words().controls; let i=index" [formGroupName]="i">  
+        <td>  
+            origin:  
+            <input type="text" formControlName="origin" class="form-control">  
+        </td>  
+        <td>  
+            target:  
+            <input type="text" formControlName="target" class="form-control">  
+        </td>  
+        <td>  
+            <button (click)="removeWord(i)" class="btn btn-danger">Remove</button>  
+        </td>  
+      </tr>  
+    </table>  
+     
+    <button type="submit" class="btn btn-success">Submit</button>  
+      
+  </form>  
+      
+  <br/>    
+</div>  
+
+

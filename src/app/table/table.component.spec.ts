@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoryTableComponent } from './table.component';
+import { Component } from '@angular/core';
+
 
 describe('TableComponent', () => {
   let component: CategoryTableComponent;
@@ -21,3 +23,8 @@ describe('TableComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+  it('should create', () => {
+    expect(Component).toBeTruthy();
+  });
+

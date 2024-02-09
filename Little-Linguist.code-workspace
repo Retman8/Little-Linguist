@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Little-Linguist",
+			"path": "."
+		},
+		{
+			"name": "git-demo",
+			"path": "../../git-demo"
+		}
+	],
+	"settings": {}
+}

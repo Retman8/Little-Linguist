@@ -23,10 +23,10 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Actions </th>
     <td mat-cell *matCellDef="let category">
-      <button mat-icon-button color="primary" (click)="editCategory(category)">
+      <a mat-icon-button color="primary" (click)="editCategory(category)">
         <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button color="warn" (click)="deleteCategory(category)">
+      </a>
+      <button mat-icon-button color="warn" (click)="openDialog(category)">
         <mat-icon>delete</mat-icon>
       </button>
     </td>
@@ -35,3 +35,6 @@
   <tr mat-header-row *matHeaderRowDef="['name', 'words', 'lastModified', 'actions']"></tr>
   <tr mat-row *matRowDef="let row; columns: ['name', 'words', 'lastModified', 'actions']"></tr>
 </table><br><br>
+<a [routerLink]="['/form']">
+  add category
+</a>
